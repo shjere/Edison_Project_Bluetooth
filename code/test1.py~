@@ -1,0 +1,14 @@
+import bluetooth
+
+bd_addr = "98:4F:EE:03:5B:7E"
+port = 1
+
+sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
+sock.connect((bd_addr, port))
+
+msg = ""
+while msg != "q":
+    msg = raw_input("q to end ->: ")
+    sock.send("Hello!")
+
+sock.close()
