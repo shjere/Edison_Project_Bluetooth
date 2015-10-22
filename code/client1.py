@@ -6,7 +6,7 @@ port = 1
 sock = bluetooth.BluetoothSocket( bluetooth.RFCOMM )
 sock.connect((bd_addr, port))
 
-msg = "Hello from Shashank!"
+msg = "Shashank"
 sock.send(msg)
 
 msg = sock.recv(1024)
